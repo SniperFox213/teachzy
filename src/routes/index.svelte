@@ -76,7 +76,7 @@
     write here, so I'll write
     something.  
   -->
-  <div style="height: 100vh; overflow: hidden;" class="relative w-1/5 shadow-sm bg-white">
+  <div style="height: 100vh; overflow: hidden;" class="relative w-1/6 shadow-sm bg-white">
     
     <!-- Logotype -->
     <div class="text-left py-4 md:py-8 lg:py-12 mx-4 md:mx-8 lg:mx-12 border-solid border-b-2 border-gray-200">
@@ -128,7 +128,7 @@
     Just another list of current
     courses.
    -->
-  <div style="overflow: hidden; height: 100vh;" class="w-2/5">
+  <div style="overflow: hidden; height: 100vh;" class="w-2/6">
     <!-- "Header" with search bar and
      notifications icon -->
     <div style="height: 20vh;" class="w-full flex justify-between items-center lg:px-12">
@@ -150,9 +150,9 @@
     <div style="overflow-y: scroll; height: 80vh;" class="w-full h-full lg:pl-16">
       <!-- Course Item -->
       { #each courses as course }
-        <div class="flex h-48 my-8">
+        <div class="flex h-32 my-8">
           <!-- Icon -->
-          <div class="w-48 relative bg-blue-500 rounded-lg">
+          <div class="w-1/3 relative bg-blue-500 rounded-lg">
             <!-- Date -->
             <div class="absolute left-0 top-0 p-4 text-black">
               <h1 class="text-2xl font-semibold">{course.date.getDay()}</h1>
@@ -161,7 +161,7 @@
           </div>
 
           <!-- Texts -->
-          <div class="items-center mx-6">
+          <div class="w-2/3 items-center mx-6">
             <h1 class="text-black text-xl font-semibold">{course.title}</h1>
           </div>
         </div>
@@ -174,7 +174,77 @@
     Some information about choosed
     Course. 
    -->
-  <div style="overflow: scroll; min-height: 100vh;" class="w-2/5 bg-white shadow-xl">
-    2
+  <div style="overflow: scroll; min-height: 100vh;" class="w-3/6 bg-white shadow-sm">
+    <!-- "Header" -->
+    <div style="height: 20vh;" class="w-full flex justify-between items-center px-6">
+      <!-- Links -->
+      <div class="flex">
+        <p class="mx-4">My courses</p>
+        <p class="mx-4">Purchases</p>
+        <p class="mx-4">Help</p>
+      </div>
+
+      <!-- User Account -->
+      <div class="flex items-center">
+        <p class="text-gray-700 mx-4">John Alby</p>
+        <span style="background: url('https://media.discordapp.net/attachments/661496619249696769/736203739727134790/b1e63fd1-1136-4aec-8b21-3d6e60d6134f.jpg')" class="w-8 h-8 rounded-full"></span>
+      </div>
+    </div>
+
+    <!-- Course information -->
+    <div class="px-6">
+      <div class="flex w-full">
+        <div class="w-full">
+          <!-- Card -->
+          <div class="h-40 w-full bg-blue-400 rounded-lg relative">
+            <!-- Date -->
+            <div class="absolute left-0 top-0 p-4 text-black">
+              <h1 class="text-2xl font-semibold">15</h1>
+              <p>Jun</p>
+            </div>
+          </div>
+
+          <!-- Some texts -->
+          <div class="mt-6">
+            <h1 class="text-xl text-black font-semibold">User Experience Design Fundamentals</h1>
+            <p class="mt-4">Gain the basic skills in User Experience. Study practice and theory. Find out techniques and tools used to design efficiently... <span class="text-indigo-700 border-indigo-700 border-solid border-b-2">more...</span></p>
+
+            <!-- Buttons -->
+            <div class="mt-6 flex">
+              <!-- Buy course -->
+              <button class="rounded-lg text-white px-6 py-4 bg-gray-900">
+                Buy course
+              </button>
+
+              <!-- Reviews -->
+              <button class="flex mx-6 items-center">
+                <img style="width: 1.2rem;" src="./icons/message-square.svg" alt="Reviews Icon">
+                <p class="mx-4">Reviews</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Statistics -->
+        <div class="w-full h-full flex flex-col justify-center items-center">
+          <!-- Start time -->
+          <div class="rounded-lg border-dotted border-2 border-indigo-700 py-4 px-12 inline-block text-center">
+            <div class="flex justify-center ml-4 items-start">
+              <h1 class="text-3xl text-indigo-700 pt-2">02</h1>
+              <h2 class="text-sm text-indigo-700 pt-2 border-solid border-b-2 border-indigo-700">30</h2>
+
+              <p class="text-sm text-black mx-2">pm</p>
+            </div>
+
+            <p class="text-black mt-2">Starting in</p>
+          </div>
+
+          <!-- More -->
+          <div class="mt-6">
+            <img style="width: 1.8rem;" src="./icons/arrow-down.svg" alt="Show More Info" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
